@@ -1,0 +1,35 @@
+<div>
+    <img class="seahawk" src="https://whoopdirt.com/wp-content/uploads/2018/08/Broward_Seahawk_head.png"/>
+    <img class="logo" src ="https://www.broward.edu/_catalogs/masterpage/MasterPages/~sitecollection/_layouts/15/1033/STYLES/BrowardImages/bc_logo.png"/>
+</div>
+ 
+<form>
+    <div>
+        <div>
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Enter your username">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <div>
+                <button mat-raised-button color="primary" [routerLink]="['/home']">Login</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <button mat-button class="guest-button" [routerLink]="['/guest-home']">Continue as guest.</button>
+            </div>
+        </div>
+    </div>
+</form>
+      
