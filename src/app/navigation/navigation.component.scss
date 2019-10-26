@@ -1,0 +1,44 @@
+img{
+    width: 90%;
+    margin-left: 5%;
+}
+
+body{
+    background-color: white;
+}
+
+mat-chip{
+    width: 100%;
+    font-size: 21px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+mat-chip-list{
+    padding: 300px;
+}
+
+.centered {
+    // display: flex;
+    // flex-direction: row;
+    // flex
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.body{
+    background-image: url("http://www.broward.edu/studentresources/disability/PublishingImages/Central-Campus-and-Buildings-ADA.jpg");
+    background-size: 357px 357px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}

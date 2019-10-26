@@ -1,7 +1,7 @@
 <div class ="container">
     <img class="seahawk" src="https://whoopdirt.com/wp-content/uploads/2018/08/Broward_Seahawk_head.png"/>
     <div class="centered">
-        <h1>Broward College</h1>
+            <img class="logo" src ="https://www.broward.edu/_catalogs/masterpage/MasterPages/~sitecollection/_layouts/15/1033/STYLES/BrowardImages/bc_logo.png"/>
     </div> 
     <div class="bottom">
         <p>Home of the Seahawks!</p>
@@ -14,13 +14,18 @@
 <div>
     <img class="background-image" src="https://www.collegerag.net/wp-content/uploads/2017/07/Broward-College-Review-777x437.jpg"/>
     <div class="centered2">
-            <mat-chip-list aria-label="Fish selection">
-                    <mat-chip>One fish</mat-chip>
-                    <mat-chip>Two fish</mat-chip>
-                    <mat-chip color="primary" selected>Primary fish</mat-chip>
-                    <mat-chip color="accent" selected>Accent fish</mat-chip>
-                  </mat-chip-list>
+            <mat-chip-list>
+                <mat-chip color="secondary" selected>One Login</mat-chip>
+                <mat-chip color="secondary" selected [routerLink]="['/navigation']"> Navigation</mat-chip>
+                <mat-chip color="secondary" selected >Student Life</mat-chip>         
+            </mat-chip-list>
     </div>
-</div>
 
+</div>
+<div class="student-id">
+    <button mat-fab color="primary" aria-label="Virtual ID" [routerLink]="['/student-id']">
+        <mat-icon>credit_card</mat-icon>
+    </button>
+    <p class="subtitle">Virtual ID</p>
+</div>
 

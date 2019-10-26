@@ -14,7 +14,7 @@
     position: absolute;
     top: 65%;
     left: 50%;
-    transform: translate( -60%, -50%);
+    transform: translate( -50%, -50%);
     
 
 }
@@ -23,7 +23,12 @@
     bottom: 30px;
     
 }
-
+.logo{
+    opacity: 1;
+}
+.seahawk{
+    opacity: 0.3;
+}
 img {
     opacity: 0.7;
 }
@@ -41,5 +46,27 @@ p{
     width:100%;
 }
 mat-chip{
-    clear:left;
+    width: 100%;
+    font-size: 21px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+mat-chip-list{
+    margin-left: 40%;
+}
+
+
+
+.student-id {
+    margin-left: 44%;
+    color: black;
+    width: 20%;
+}
+
+.subtitle {
+    margin-left: -10%;
+    color: black;
 }

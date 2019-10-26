@@ -13,12 +13,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './home/home.component';
 import {MatChipsModule} from '@angular/material/chips';
+import { NavigationComponent } from './navigation/navigation.component';
+import { StudentIdComponent } from './home/student-id/student-id.component';
+import { GuestHomeComponent } from './guest-home/guest-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent,
+    StudentIdComponent,
+    GuestHomeComponent
   ],
   imports: [
     MatChipsModule,
