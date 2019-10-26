@@ -16,6 +16,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import { NavigationComponent } from './navigation/navigation.component';
 import { StudentIdComponent } from './home/student-id/student-id.component';
 import { GuestHomeComponent } from './guest-home/guest-home.component';
+import { StudentLifeComponent } from './home/student-life/student-life.component';
+import { MapsComponent } from './navigation/maps/maps.component';
+import { GuidanceComponent } from './home/guidance/guidance.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { GuestHomeComponent } from './guest-home/guest-home.component';
     HomeComponent,
     NavigationComponent,
     StudentIdComponent,
-    GuestHomeComponent
+    GuestHomeComponent,
+    StudentLifeComponent,
+    MapsComponent,
+    GuidanceComponent
   ],
   imports: [
     MatChipsModule,

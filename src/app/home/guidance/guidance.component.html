@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/guidance.component.scss">
+    </head>
+<body>
+    <section id="greeting">
+        <div>
+            <h3 class="text-center">Broward College Transfer Guidance</h3>
+            <div class="container">
+            <p>Hello and welcome to a Broward College transfer guide. The process of transferring
+                to a different university can sometimes be overwheliming, especially to incoming freshmen.
+                 We hope to ease this process by creating an interface to help you during your journey.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="form" class="container">
+            <p> Please tell me about yourself... </p>
+
+            <div>
+                <form action="" method="GET">
+                    First name:<br>
+                  <input type="text" name="firstname" value="">
+                </form>
+            </div>
+              
+              <p> Please tell me what university you would like to attend:</p>
+            
+                <div>
+
+                    <input type="radio" name="school" value="fau" checked> FAU<br>
+                    <input type="radio" name="school" value="fiu"> FIU <br>
+                    <input type="radio" name="school" value="uf"> UF <br>
+                    <input type="radio" name="school" value="fsu"> FSU <br>
+                    <input type="radio" name="school" value="ucf"> UCF <br>
+                    <input type="radio" name="school" value="other"> Other <br>
+        
+                </div>
+            
+                <p>Finally, please tell me what is you would like to study there.</p>
+                <p>Intended Major:</p>
+                        <input type="text" name="intended_major" value="" placeholder="enter a major">
+                        <br><br>
+                        <p>Once you have completed everything, please go ahead and click submit.</p>
+                        <br><br>
+                        <input type="submit" value="Submit">
+            
+                    
+                    
+                    <div id="continue_form"></div>
+    </section>
+     
+
+        <script type="text/javascript">
+
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+           
+    
+            var url = window.location.href;
+            if(url.indexOf('?firstname=') != -1) {
+                var firstname = getParameterByName( 'firstname', url );
+                var school = getParameterByName( 'school', url );
+                var intended_major = getParameterByName( 'intended_major', url );
+                //alert( firstname );
+                console.log( firstname );  
+
+                transferoutput='<p><strong>Hello ' + firstname + '</strong></p>';
+                    
+                if ( school === 'fau' ) {
+                     
+                    transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>'; 
+
+                    }
+             
+                else if ( school === 'fiu' ) {
+                     
+                    transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>'; 
+
+                    }
+                  
+                else if ( school === 'ucf' ) {
+                     
+                    transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>'; 
+
+                    }
+                   
+               else if ( school === 'uf' ) {
+                     
+                transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>'; 
+                    }
+                   
+                else if ( school === 'fsu' ) {
+                     
+                    transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>'; 
+                    }
+
+                else if (school === 'other')
+                transferoutput= transferoutput+'<p> I see that you want to study '  + intended_major  + " at " + school + '</strong></p>';
+                        transferoutput= transferoutput+'<p> <strong>Below is an important url! Please click this and find ' + school + ' with ' + intended_major + '</strong></p>';                        
+                        transferoutput= transferoutput+'<p> <style="color:red"><a href="https://dlss.flvc.org/admin-tools/common-prerequisites-manuals/2019-2020-manual/program-listing-alphabetic-order-2019" target="_blank">Prerequisites you need</a></p>';
+                        transferoutput= transferoutput+'<p> The list of classes of prerequisites you see, sometimes expressed in a flow chart, are the classes you need to take along with the classes you take at Broward College for your AA degree.</p>';
+                        transferoutput= transferoutput+'<p> The classes that you need to take at Broward College, like humanities or ENC 1101, can be found <a href="http://broward.edu/studentresources/advising/Documents/gened_overview.pdf" target="_blank">here</a></p>';
+                        transferoutput= transferoutput+ '<p> After clicking on those links and reading about your respestive major and university you want to study and attend, you should hopefully have a better understanding of your journey. </p>';
+                        transferoutput= transferoutput+ '<p> Still a little puzzled? Do not worry!! Just because you now know the classes you need, there is still the process of mapping out your future and registering terms with the classes you need. </p>';
+                        transferoutput= transferoutput+ '<p> How about scheduling an appointment with a professional <a href="" target="_blank">advisor?</a></p>';
+                        transferoutput= transferoutput+'<p> Get on track and take control of your future today!</p>';  
+                
+                 document.getElementById("continue_form").innerHTML=transferoutput;
+                }
+            
+            
+    
+            
+                
+    </script>
+
+
+</body>
+</html>

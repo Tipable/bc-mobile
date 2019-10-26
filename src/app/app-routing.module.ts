@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { StudentIdComponent } from './home/student-id/student-id.component';
 import { GuestHomeComponent } from './guest-home/guest-home.component';
+import { StudentLifeComponent } from './home/student-life/student-life.component';
+import { MapsComponent } from './navigation/maps/maps.component';
+import { GuidanceComponent } from './home/guidance/guidance.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,18 @@ const routes: Routes = [
   {
     path: 'navigation',
     component: NavigationComponent,
+  },
+  {
+    path: 'student-life',
+    component: StudentLifeComponent,
+  },
+  {
+    path: 'maps',
+    component: MapsComponent,
+  },
+  {
+    path: 'guidance',
+    component: GuidanceComponent,
   }
 ];
 
